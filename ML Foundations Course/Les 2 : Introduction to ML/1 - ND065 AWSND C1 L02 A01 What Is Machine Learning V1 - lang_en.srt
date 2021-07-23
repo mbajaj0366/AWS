@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:03,405
+Welcome to introduction to machine learning lesson.
+
+2
+00:00:03,405 --> 00:00:07,215
+I'm excited to be your instructor for this section.
+
+3
+00:00:07,215 --> 00:00:13,709
+Machine learning is creating reckless and exciting changes across all levels of society,
+
+4
+00:00:13,709 --> 00:00:17,760
+it's the engine behind the recent advancement in autonomous vehicles.
+
+5
+00:00:17,760 --> 00:00:24,734
+It allows for a more accurate and rapid translation of text into hundreds of languages,
+
+6
+00:00:24,734 --> 00:00:29,280
+and it powers the AI assistants you might find in your home.
+
+7
+00:00:29,280 --> 00:00:33,050
+We can also use machine learning to do things like improving
+
+8
+00:00:33,050 --> 00:00:37,100
+worker safety and a speeding up drug discovery.
+
+9
+00:00:37,100 --> 00:00:40,640
+Machine learning Is a complex subject area.
+
+10
+00:00:40,640 --> 00:00:44,120
+Our goal in this lesson is introduce you to some of
+
+11
+00:00:44,120 --> 00:00:48,005
+the most common terms and ideas used in machine learning.
+
+12
+00:00:48,005 --> 00:00:53,045
+I would then walk you through the different steps involved in machine learning,
+
+13
+00:00:53,045 --> 00:00:55,940
+and finish with a series of examples which
+
+14
+00:00:55,940 --> 00:00:59,395
+use machine learning to solve real-world situations.
+
+15
+00:00:59,395 --> 00:01:03,850
+There are a lot to cover. Let's get started.
+

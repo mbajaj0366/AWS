@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:03,870
+After we have collected our dataset and trained our model,
+
+2
+00:00:03,870 --> 00:00:07,995
+we are ready to actually see how well our model works.
+
+3
+00:00:07,995 --> 00:00:10,700
+Let us start with an example.
+
+4
+00:00:10,700 --> 00:00:14,340
+Let's say there is a dataset containing data on
+
+5
+00:00:14,340 --> 00:00:19,530
+many different aspects of flowers like petal lengths or color.
+
+6
+00:00:19,530 --> 00:00:23,730
+Let's say you're building a model to determine if a flower is one
+
+7
+00:00:23,730 --> 00:00:27,840
+of two commonest species based on measurable details.
+
+8
+00:00:27,840 --> 00:00:32,760
+You could use model accuracy or how often your model predicts
+
+9
+00:00:32,760 --> 00:00:35,520
+the character species to evaluate if
+
+10
+00:00:35,520 --> 00:00:39,500
+your trained model will be good at solving that task.
+
+11
+00:00:39,500 --> 00:00:44,615
+To evaluate models, we often use a statistical metrics like accuracy.
+
+12
+00:00:44,615 --> 00:00:48,875
+Here are a few examples of different metrics that you can use.
+
+13
+00:00:48,875 --> 00:00:51,605
+Some are more common than others.
+
+14
+00:00:51,605 --> 00:00:55,430
+For example, precision or F1 score,
+
+15
+00:00:55,430 --> 00:00:58,130
+but there are more that you can explore.
+
+16
+00:00:58,130 --> 00:01:02,470
+Please note that this is not a one-and-done process.
+
+17
+00:01:02,470 --> 00:01:07,670
+It's an iterative process until you get the results you're looking for.
+
+18
+00:01:07,670 --> 00:01:10,790
+Based on how the model evaluation goes,
+
+19
+00:01:10,790 --> 00:01:16,040
+you may find that you need to go back to previous steps that we discussed.
+
+20
+00:01:16,040 --> 00:01:19,670
+You might need to change the configuration of parameters of
+
+21
+00:01:19,670 --> 00:01:23,795
+the training model or possibly even choosing different model.
+
+22
+00:01:23,795 --> 00:01:28,510
+You might have to tweak the model or make adjustments to your data.
+
+23
+00:01:28,510 --> 00:01:32,730
+You might even rethink how you are framing the problem.
+
+24
+00:01:32,730 --> 00:01:37,385
+At some point, you will have a model which meets your need.
+
+25
+00:01:37,385 --> 00:01:40,140
+Now you can use the model.
+

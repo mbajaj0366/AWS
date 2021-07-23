@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:04,635
+You have learned about the tasks of machine learning workflow.
+
+2
+00:00:04,635 --> 00:00:08,910
+Now, let's see what this actually looks like in real life.
+
+3
+00:00:08,910 --> 00:00:14,925
+We are going to look at three case studies showing three types of machine learning tasks.
+
+4
+00:00:14,925 --> 00:00:19,640
+Supervised learning task, where we tried to predict housing prices for
+
+5
+00:00:19,640 --> 00:00:24,460
+homes in your neighborhood based on lot size and number of bedrooms.
+
+6
+00:00:24,460 --> 00:00:29,655
+Unsupervised learning task where we try to use machine learning to find
+
+7
+00:00:29,655 --> 00:00:31,830
+interesting collections of books in
+
+8
+00:00:31,830 --> 00:00:36,795
+a book dataset based on descriptive words in the book description.
+
+9
+00:00:36,795 --> 00:00:43,430
+Finally, we will see a third case study where we use a more modern model called a
+
+10
+00:00:43,430 --> 00:00:50,545
+deep neural network to try to detect chemical spills in a lab from video and images.
+
+11
+00:00:50,545 --> 00:00:54,740
+While neural networks are beyond the scope of this lesson,
+
+12
+00:00:54,740 --> 00:00:58,800
+we felt it's worthwhile to touch on how they work.
+

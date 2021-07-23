@@ -1,0 +1,352 @@
+1
+00:00:00,000 --> 00:00:03,000
+The first step in the machine learning workflow is to
+
+2
+00:00:03,000 --> 00:00:06,510
+define the machine learning problem you are trying to solve.
+
+3
+00:00:06,510 --> 00:00:08,370
+You might be wondering,
+
+4
+00:00:08,370 --> 00:00:11,940
+how are we even to start to define a machine learning task?
+
+5
+00:00:11,940 --> 00:00:15,150
+First we define a very specific task.
+
+6
+00:00:15,150 --> 00:00:17,745
+Think back to our snow cone example.
+
+7
+00:00:17,745 --> 00:00:21,000
+Now imagine that you own a frozen treat store,
+
+8
+00:00:21,000 --> 00:00:24,675
+and you sell snow cones along with many other products.
+
+9
+00:00:24,675 --> 00:00:27,900
+You wonder, how do I increase sales?
+
+10
+00:00:27,900 --> 00:00:30,540
+This is not a specific task.
+
+11
+00:00:30,540 --> 00:00:32,280
+It is too broad.
+
+12
+00:00:32,280 --> 00:00:37,905
+A machine learning practitioner might frame the problem differently, such as,
+
+13
+00:00:37,905 --> 00:00:41,370
+does adding a dollar upcharge for sprinkles on
+
+14
+00:00:41,370 --> 00:00:45,580
+a hot fudge sundae increase the number of snow cones sold?
+
+15
+00:00:45,580 --> 00:00:48,240
+Or another example, does adding
+
+16
+00:00:48,240 --> 00:00:53,450
+a 50 cent upcharge for mixing flavors increase the number of snow cones sold?
+
+17
+00:00:53,450 --> 00:00:59,330
+Next, we want to identify the machine learning task we should use to solve this problem.
+
+18
+00:00:59,330 --> 00:01:04,355
+This will help us better understand the data we need for the proposed project.
+
+19
+00:01:04,355 --> 00:01:07,705
+You will look at some examples in more detail.
+
+20
+00:01:07,705 --> 00:01:11,070
+What exactly are machine learning tasks?
+
+21
+00:01:11,070 --> 00:01:18,160
+All model training algorithms and the models themselves take data as their input.
+
+22
+00:01:18,160 --> 00:01:21,710
+The outputs, however, can be very different.
+
+23
+00:01:21,710 --> 00:01:26,300
+They can be classified into different groups based on the machine learning task.
+
+24
+00:01:26,300 --> 00:01:29,150
+The characteristics of the input data actually
+
+25
+00:01:29,150 --> 00:01:32,125
+help define which machine learning task can be used.
+
+26
+00:01:32,125 --> 00:01:37,565
+Two common machine learning tasks are supervised and unsupervised learning.
+
+27
+00:01:37,565 --> 00:01:42,035
+We have reinforcement learning as well as we briefly talked about it before,
+
+28
+00:01:42,035 --> 00:01:46,070
+but you will learn about reinforcement learning in a later lesson.
+
+29
+00:01:46,070 --> 00:01:49,520
+One way to break down these machine learning task is
+
+30
+00:01:49,520 --> 00:01:53,045
+based on the type of data you need to train your model.
+
+31
+00:01:53,045 --> 00:01:58,970
+Most data can be described as either labeled or unlabeled data.
+
+32
+00:01:58,970 --> 00:02:01,240
+What's the difference?
+
+33
+00:02:01,240 --> 00:02:04,605
+Let's talk about supervised learning first.
+
+34
+00:02:04,605 --> 00:02:08,185
+We use the term labeled data to refer to data that
+
+35
+00:02:08,185 --> 00:02:12,510
+already contains the solution called labels.
+
+36
+00:02:12,510 --> 00:02:16,070
+Let's think back to our snow cone example.
+
+37
+00:02:16,070 --> 00:02:18,980
+What were we trying to predict?
+
+38
+00:02:18,980 --> 00:02:23,330
+We were trying to predict the number of snow cones we would sell.
+
+39
+00:02:23,330 --> 00:02:27,340
+Those data points are solutions or labels.
+
+40
+00:02:27,340 --> 00:02:30,790
+We use both the number of snow cones sold and
+
+41
+00:02:30,790 --> 00:02:35,090
+the temperature to generate the best fit line on the graph.
+
+42
+00:02:35,090 --> 00:02:39,610
+Another type of machine learning task is unsupervised learning.
+
+43
+00:02:39,610 --> 00:02:41,305
+As you might guess,
+
+44
+00:02:41,305 --> 00:02:46,045
+we call data unlabeled when we don't have the solutions or labels.
+
+45
+00:02:46,045 --> 00:02:49,010
+Let's look at a couple of examples here.
+
+46
+00:02:49,010 --> 00:02:52,110
+Take a quick look at this picture.
+
+47
+00:02:52,110 --> 00:02:59,340
+What do you see? Your first thought may be a tree.
+
+48
+00:02:59,340 --> 00:03:01,950
+You just labeled this picture.
+
+49
+00:03:01,950 --> 00:03:05,450
+But a computer initially only sees that image as
+
+50
+00:03:05,450 --> 00:03:08,990
+a matrix of pixels which represents that image,
+
+51
+00:03:08,990 --> 00:03:11,020
+not the whole image.
+
+52
+00:03:11,020 --> 00:03:13,380
+Here's another example.
+
+53
+00:03:13,380 --> 00:03:18,395
+Imagine that you work for a company that recommends book to readers.
+
+54
+00:03:18,395 --> 00:03:21,590
+To provide better recommendations to your readers,
+
+55
+00:03:21,590 --> 00:03:25,225
+you want to discover known microgenres.
+
+56
+00:03:25,225 --> 00:03:29,405
+You are fairly confident that these genres exist.
+
+57
+00:03:29,405 --> 00:03:33,290
+It would be impossible for you to read every book in
+
+58
+00:03:33,290 --> 00:03:37,460
+the world to ensure that the particular microgenre exists.
+
+59
+00:03:37,460 --> 00:03:41,480
+But words and phrases used in the book description might
+
+60
+00:03:41,480 --> 00:03:45,670
+provide some guidance on which microgenre a book belongs to.
+
+61
+00:03:45,670 --> 00:03:49,155
+Because you don't know which microgenre exists,
+
+62
+00:03:49,155 --> 00:03:52,540
+you cannot use supervised learning technique here.
+
+63
+00:03:52,540 --> 00:03:54,420
+You don't have labels.
+
+64
+00:03:54,420 --> 00:03:58,820
+Instead, you can use a common unsupervised learning technique called
+
+65
+00:03:58,820 --> 00:04:03,730
+clustering to determine if books have some natural grouping.
+
+66
+00:04:03,730 --> 00:04:06,830
+We will take another look at this example of
+
+67
+00:04:06,830 --> 00:04:11,185
+unsupervised learning in a real-world scenario later in this lesson.
+
+68
+00:04:11,185 --> 00:04:16,260
+Just as we initially divided task based on whether we had labeled data or not,
+
+69
+00:04:16,260 --> 00:04:21,650
+we can continue to further define the machine learning tasks based on the type of label.
+
+70
+00:04:21,650 --> 00:04:24,710
+Imagine that we trained a machine learning model to
+
+71
+00:04:24,710 --> 00:04:28,255
+predict a type of a flower based on images.
+
+72
+00:04:28,255 --> 00:04:32,455
+In this example, our label is categorical.
+
+73
+00:04:32,455 --> 00:04:35,915
+We are performing a classification task.
+
+74
+00:04:35,915 --> 00:04:38,385
+In our snow cone example,
+
+75
+00:04:38,385 --> 00:04:41,150
+we were trying to predict the number of snow cones
+
+76
+00:04:41,150 --> 00:04:44,180
+sold on a given day based on a temperature.
+
+77
+00:04:44,180 --> 00:04:48,505
+Our label is a number that could in theory be anything.
+
+78
+00:04:48,505 --> 00:04:52,630
+In that case, we are performing a regression task.
+
+79
+00:04:52,630 --> 00:04:56,710
+These are just two of the most common examples.
+
+80
+00:04:56,710 --> 00:04:58,580
+You will find many other types of
+
+81
+00:04:58,580 --> 00:05:02,735
+supervised learning task as you explore the machine learning space.
+
+82
+00:05:02,735 --> 00:05:05,765
+Similarly, with unsupervised learning,
+
+83
+00:05:05,765 --> 00:05:10,475
+you can further narrow the scope of the machine learning task you're working on.
+
+84
+00:05:10,475 --> 00:05:13,070
+In our book microgenre example,
+
+85
+00:05:13,070 --> 00:05:17,575
+clustering is one common application of unsupervised learning.
+
+86
+00:05:17,575 --> 00:05:20,270
+As you explore the machine learning space,
+
+87
+00:05:20,270 --> 00:05:23,930
+you will find many other types of unsupervised learning tasks,
+
+88
+00:05:23,930 --> 00:05:26,580
+such as neural networks.
+

@@ -1,0 +1,32 @@
+1
+00:00:00,000 --> 00:00:03,630
+Regardless of a specific model or training algorithm used,
+
+2
+00:00:03,630 --> 00:00:08,480
+many people working in machine learning space use a common workflow.
+
+3
+00:00:08,480 --> 00:00:13,150
+The steps in this workflow are: defining the problem,
+
+4
+00:00:13,150 --> 00:00:17,385
+building a dataset, training the model,
+
+5
+00:00:17,385 --> 00:00:21,510
+evaluating the model, and using the model.
+
+6
+00:00:21,510 --> 00:00:26,565
+The remainder of this lesson will be centered around each step in this process.
+
+7
+00:00:26,565 --> 00:00:29,700
+We will talk about different potential pain points and
+
+8
+00:00:29,700 --> 00:00:34,540
+common tasks machine learning practitioners do at each step.
+

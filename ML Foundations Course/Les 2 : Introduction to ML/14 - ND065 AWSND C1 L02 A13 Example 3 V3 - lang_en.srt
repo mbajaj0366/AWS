@@ -1,0 +1,320 @@
+1
+00:00:00,000 --> 00:00:02,835
+Let's review example number 3.
+
+2
+00:00:02,835 --> 00:00:04,975
+In the past examples,
+
+3
+00:00:04,975 --> 00:00:11,260
+we use classical methods like linear models and k-means to solve machine learning tasks.
+
+4
+00:00:11,260 --> 00:00:15,610
+In this example, we will see a more modern model type.
+
+5
+00:00:15,610 --> 00:00:21,145
+You run a company which offers a specialized on-site janitorial services.
+
+6
+00:00:21,145 --> 00:00:24,460
+One of your clients and industrial chemical plant
+
+7
+00:00:24,460 --> 00:00:29,255
+requires fast response for spills and other health hazards.
+
+8
+00:00:29,255 --> 00:00:33,250
+You realize you should be able to mobilize your janitorial team
+
+9
+00:00:33,250 --> 00:00:37,775
+faster if you could detect the spills from the plant surveillance system.
+
+10
+00:00:37,775 --> 00:00:42,775
+You investigate using machine learning to perform this automatic detection.
+
+11
+00:00:42,775 --> 00:00:48,665
+You recognize you can represent this task as a supervised classification task.
+
+12
+00:00:48,665 --> 00:00:52,960
+Your goal will be to predict if each image belongs to a,
+
+13
+00:00:52,960 --> 00:00:57,925
+contains a spill class or it does not contain a spill class.
+
+14
+00:00:57,925 --> 00:01:00,860
+Since you run the janitorial service,
+
+15
+00:01:00,860 --> 00:01:04,300
+it's pretty easy for you to stage safe for spills.
+
+16
+00:01:04,300 --> 00:01:07,840
+You quickly build a collection of images that contain
+
+17
+00:01:07,840 --> 00:01:12,775
+both the spills and non spills in multiple lighting conditions and environments.
+
+18
+00:01:12,775 --> 00:01:16,720
+Exploring and cleaning your dataset is pretty straightforward.
+
+19
+00:01:16,720 --> 00:01:21,805
+You quickly flip through all photos to ensure the spill is clearly in shut.
+
+20
+00:01:21,805 --> 00:01:27,080
+You split the images into a training dataset and test dataset.
+
+21
+00:01:27,080 --> 00:01:32,165
+The surveillance system produces only grayscale images.
+
+22
+00:01:32,165 --> 00:01:37,720
+You convert the image to numeric data so the model can process the data.
+
+23
+00:01:37,720 --> 00:01:42,170
+To demonstrate this, in this example of a dark liquidus spill,
+
+24
+00:01:42,170 --> 00:01:45,470
+you can see each pixel in the image on the left can be
+
+25
+00:01:45,470 --> 00:01:50,635
+represented in the image on the right by a number between zero and one.
+
+26
+00:01:50,635 --> 00:01:55,750
+Zero being completely black and one being completely white.
+
+27
+00:01:55,750 --> 00:01:58,400
+Traditionally to solve this problem,
+
+28
+00:01:58,400 --> 00:02:02,390
+a human would have to manually label the features in the image.
+
+29
+00:02:02,390 --> 00:02:04,760
+For example, locations are prominent,
+
+30
+00:02:04,760 --> 00:02:06,965
+edges and corners in the image,
+
+31
+00:02:06,965 --> 00:02:10,115
+and then train a model on these features.
+
+32
+00:02:10,115 --> 00:02:16,040
+Today, deep neural networks are the most commonly used tool for the problems like this.
+
+33
+00:02:16,040 --> 00:02:19,010
+These deep neural networks can learn
+
+34
+00:02:19,010 --> 00:02:22,790
+the features in an image as long as they have been labeled.
+
+35
+00:02:22,790 --> 00:02:26,350
+CNN or Convolutional Neural Network,
+
+36
+00:02:26,350 --> 00:02:30,260
+which is a common deep learning model for processing image,
+
+37
+00:02:30,260 --> 00:02:33,250
+is a good model choice for this task.
+
+38
+00:02:33,250 --> 00:02:38,300
+These neural networks are made up of many different types of layers.
+
+39
+00:02:38,300 --> 00:02:43,435
+These layers are required for neural networks to train successfully.
+
+40
+00:02:43,435 --> 00:02:48,005
+The details of neural networks are beyond the scope of this lesson,
+
+41
+00:02:48,005 --> 00:02:51,695
+but we wanted to at least introduce the idea.
+
+42
+00:02:51,695 --> 00:02:54,535
+We will keep things high level for now.
+
+43
+00:02:54,535 --> 00:02:59,170
+You begin training to solve your classification task here.
+
+44
+00:02:59,170 --> 00:03:02,180
+As we saw in our last example,
+
+45
+00:03:02,180 --> 00:03:06,170
+there are also many options for the statistical metrics you can
+
+46
+00:03:06,170 --> 00:03:10,480
+use to help determine how effective your neural network model is.
+
+47
+00:03:10,480 --> 00:03:13,145
+As you further explore machine learning,
+
+48
+00:03:13,145 --> 00:03:17,105
+you will learn to research and identify these metrics
+
+49
+00:03:17,105 --> 00:03:22,025
+and learn which one help you evaluate your model most effectively.
+
+50
+00:03:22,025 --> 00:03:23,780
+As we will see here,
+
+51
+00:03:23,780 --> 00:03:28,190
+precision and recall will be effective in this example.
+
+52
+00:03:28,190 --> 00:03:33,650
+You stop and realize that accuracy might not be the best evaluation mechanism.
+
+53
+00:03:33,650 --> 00:03:37,565
+Defined as percentage of correct predictions,
+
+54
+00:03:37,565 --> 00:03:42,655
+you realize the model will see the newest spill class almost all the time.
+
+55
+00:03:42,655 --> 00:03:49,310
+Any model that just predicts no spill most of the time will be pretty accurate.
+
+56
+00:03:49,310 --> 00:03:56,305
+What you really care is an evaluation mechanism that really misses a real spill.
+
+57
+00:03:56,305 --> 00:03:58,925
+After doing some Internet search,
+
+58
+00:03:58,925 --> 00:04:01,850
+you realize this is a common problem.
+
+59
+00:04:01,850 --> 00:04:05,450
+You augment your accuracy valuation mechanism with
+
+60
+00:04:05,450 --> 00:04:09,205
+the evaluation metrics, precision and recall.
+
+61
+00:04:09,205 --> 00:04:12,825
+You can think of precision as answering the question,
+
+62
+00:04:12,825 --> 00:04:16,845
+of all predictions of a spill how many were right?
+
+63
+00:04:16,845 --> 00:04:18,580
+Or in this example,
+
+64
+00:04:18,580 --> 00:04:23,075
+how often will I be sending a janitor to clean an actual spill?
+
+65
+00:04:23,075 --> 00:04:28,390
+You can think of recall as answering the question of all actual spills,
+
+66
+00:04:28,390 --> 00:04:30,415
+how many did we detect?
+
+67
+00:04:30,415 --> 00:04:31,959
+Or in this example,
+
+68
+00:04:31,959 --> 00:04:35,150
+how many of these spills did my system catch?
+
+69
+00:04:35,150 --> 00:04:39,745
+You also realize your [inaudible] spills might not have been sufficiently
+
+70
+00:04:39,745 --> 00:04:42,430
+realistic and you really want to have
+
+71
+00:04:42,430 --> 00:04:46,750
+a good sense of how well your model will do when you use it.
+
+72
+00:04:46,750 --> 00:04:50,050
+You spend an hour searching through historical records of
+
+73
+00:04:50,050 --> 00:04:54,110
+the surveillance system and find a few cases are real spills.
+
+74
+00:04:54,110 --> 00:04:57,005
+You evaluate your model against this dataset
+
+75
+00:04:57,005 --> 00:05:00,470
+and convert that into performing satisfactorily.
+
+76
+00:05:00,470 --> 00:05:02,585
+Confident in these results,
+
+77
+00:05:02,585 --> 00:05:05,990
+you deploy this model on a system that enables
+
+78
+00:05:05,990 --> 00:05:09,890
+you to run machine-learning workloads on surveillance systems.
+
+79
+00:05:09,890 --> 00:05:14,300
+You implement a simple paging system and begin transitioning
+
+80
+00:05:14,300 --> 00:05:19,530
+your team to respond to these pages in addition to the typical routines.
+

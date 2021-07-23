@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:02,820
+Let's walk through this lesson's outline.
+
+2
+00:00:02,820 --> 00:00:06,540
+First, we will discuss what machine learning is and the common
+
+3
+00:00:06,540 --> 00:00:10,590
+terms and components involved in machine learning projects.
+
+4
+00:00:10,590 --> 00:00:14,460
+You might know that machine learning involves using train models to
+
+5
+00:00:14,460 --> 00:00:18,315
+generate predictions or detect patterns from data.
+
+6
+00:00:18,315 --> 00:00:20,985
+But what is happening behind the scene?
+
+7
+00:00:20,985 --> 00:00:26,880
+In this section, we break down the different steps involved in machine learning.
+
+8
+00:00:26,880 --> 00:00:31,005
+It's always important to connect theory to practice.
+
+9
+00:00:31,005 --> 00:00:33,840
+We will finish this lesson by providing
+
+10
+00:00:33,840 --> 00:00:39,640
+a real-world example of how machine learning is being used to solve problems.
+

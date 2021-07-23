@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:04,815
+When your model produces the quality and accuracy you are looking for,
+
+2
+00:00:04,815 --> 00:00:09,120
+you can begin to use your model to solve the original problem.
+
+3
+00:00:09,120 --> 00:00:13,500
+Once you have trained your model and evaluated its effectiveness,
+
+4
+00:00:13,500 --> 00:00:18,225
+you're ready to generate predictions from real unseen data in the field.
+
+5
+00:00:18,225 --> 00:00:22,650
+In machine learning, this process is often called inference.
+
+6
+00:00:22,650 --> 00:00:26,640
+Keep in mind that you will always be monitoring to make sure
+
+7
+00:00:26,640 --> 00:00:30,750
+your model is producing the kinds of results that you're expecting.
+
+8
+00:00:30,750 --> 00:00:32,955
+As we mentioned before,
+
+9
+00:00:32,955 --> 00:00:35,700
+there may be times where you re-investigate
+
+10
+00:00:35,700 --> 00:00:40,240
+the data or even choose a model type used for training.
+

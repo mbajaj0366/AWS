@@ -1,0 +1,316 @@
+1
+00:00:00,000 --> 00:00:02,970
+Let's explore a second example.
+
+2
+00:00:02,970 --> 00:00:05,070
+You do editorial work for
+
+3
+00:00:05,070 --> 00:00:08,100
+a book recommendation company and you want
+
+4
+00:00:08,100 --> 00:00:11,610
+to write an article on the largest book trends of the year.
+
+5
+00:00:11,610 --> 00:00:16,065
+You are aware of trends, describe that, microgenres.
+
+6
+00:00:16,065 --> 00:00:20,550
+For example, Teen Vampire romance novels.
+
+7
+00:00:20,550 --> 00:00:23,910
+You have high confidence that other microgenres
+
+8
+00:00:23,910 --> 00:00:27,045
+exist and you believe that words and phrases used
+
+9
+00:00:27,045 --> 00:00:29,870
+in the back of the book description might provide
+
+10
+00:00:29,870 --> 00:00:33,415
+some guidance on which microgenre a book belongs to.
+
+11
+00:00:33,415 --> 00:00:36,200
+You think you can use machine learning to explore
+
+12
+00:00:36,200 --> 00:00:39,410
+whether books can be grouped together in this way.
+
+13
+00:00:39,410 --> 00:00:45,590
+You anticipate that books with similar content use similar words on the back of the book.
+
+14
+00:00:45,590 --> 00:00:48,950
+You've seen that, microgenres might be represented as
+
+15
+00:00:48,950 --> 00:00:52,940
+groups of books whose description use very similar words.
+
+16
+00:00:52,940 --> 00:00:55,415
+You will define the problem as,
+
+17
+00:00:55,415 --> 00:01:00,730
+let's find the clusters of similar books based on presence of certain words.
+
+18
+00:01:00,730 --> 00:01:04,610
+Earlier in this lesson we discussed unsupervised learning.
+
+19
+00:01:04,610 --> 00:01:10,715
+Remember this is especially useful if our data is not labeled.
+
+20
+00:01:10,715 --> 00:01:14,240
+You decide to use an unsupervised machine learning called
+
+21
+00:01:14,240 --> 00:01:18,035
+clustering approach to explore this proposed structure.
+
+22
+00:01:18,035 --> 00:01:20,170
+Data collection.
+
+23
+00:01:20,170 --> 00:01:25,850
+You collect back of book texts for 800 Romans books published in the current year.
+
+24
+00:01:25,850 --> 00:01:28,520
+Because you don't think capitalization and
+
+25
+00:01:28,520 --> 00:01:31,220
+verb tense matter for this structure you propose,
+
+26
+00:01:31,220 --> 00:01:35,605
+you remove capitals and convert all verbs to the same text.
+
+27
+00:01:35,605 --> 00:01:40,970
+For this, you can even use Python library built for processing human language.
+
+28
+00:01:40,970 --> 00:01:48,130
+You also remove punctuation and words you don't think have useful meaning like a and the.
+
+29
+00:01:48,130 --> 00:01:53,000
+Data vectorization is a process which turns the words into numbers.
+
+30
+00:01:53,000 --> 00:01:59,240
+You transform this backup book texts into what is called a bag-of-words representation,
+
+31
+00:01:59,240 --> 00:02:02,330
+which is understandable by machine learning maps.
+
+32
+00:02:02,330 --> 00:02:06,290
+How bag-of-words works is beyond the scope of this course,
+
+33
+00:02:06,290 --> 00:02:07,670
+but in this image here,
+
+34
+00:02:07,670 --> 00:02:09,440
+you can see it just transforms,
+
+35
+00:02:09,440 --> 00:02:11,890
+it takes into sequence of numbers.
+
+36
+00:02:11,890 --> 00:02:14,205
+Through some Internet searching,
+
+37
+00:02:14,205 --> 00:02:17,105
+you determine the clustering model called
+
+38
+00:02:17,105 --> 00:02:23,185
+k-means is a good first choice because it's simple and general purpose.
+
+39
+00:02:23,185 --> 00:02:25,440
+The k in k-means,
+
+40
+00:02:25,440 --> 00:02:29,385
+defines how many clusters the model will fight.
+
+41
+00:02:29,385 --> 00:02:32,955
+You don't know how many microgenres exist,
+
+42
+00:02:32,955 --> 00:02:36,790
+so you run model training for multiple values of k,
+
+43
+00:02:36,790 --> 00:02:38,760
+let's say 2, 3,
+
+44
+00:02:38,760 --> 00:02:40,800
+all the way up to 40,
+
+45
+00:02:40,800 --> 00:02:45,245
+and plan when choosing the best one during model evaluation.
+
+46
+00:02:45,245 --> 00:02:47,385
+What does this look like?
+
+47
+00:02:47,385 --> 00:02:52,505
+In this example, you can see k equal two clusters,
+
+48
+00:02:52,505 --> 00:02:56,135
+and here is k equal three clusters.
+
+49
+00:02:56,135 --> 00:02:58,985
+When evaluating machine learning models,
+
+50
+00:02:58,985 --> 00:03:02,390
+there are many options for the statistical metrics you can
+
+51
+00:03:02,390 --> 00:03:06,200
+use to help determine how effective your model is.
+
+52
+00:03:06,200 --> 00:03:10,400
+Most of these metrics are beyond the scope of this lesson,
+
+53
+00:03:10,400 --> 00:03:13,115
+but as you start to use machine learning,
+
+54
+00:03:13,115 --> 00:03:16,040
+you will learn to research and identify
+
+55
+00:03:16,040 --> 00:03:20,995
+these metrics to help you evaluate your model most effectively.
+
+56
+00:03:20,995 --> 00:03:25,335
+In this case, silhouette coefficient will serve as well.
+
+57
+00:03:25,335 --> 00:03:27,750
+We are back to our example.
+
+58
+00:03:27,750 --> 00:03:31,010
+Silhouette coefficient is a common metric for
+
+59
+00:03:31,010 --> 00:03:34,285
+determining how well your data was clustered.
+
+60
+00:03:34,285 --> 00:03:38,030
+You plot a silhouette coefficient for each model you trained
+
+61
+00:03:38,030 --> 00:03:41,420
+in their previous step and observe some sudden point of
+
+62
+00:03:41,420 --> 00:03:45,430
+diminishing returns as you increase k. It
+
+63
+00:03:45,430 --> 00:03:50,560
+seems as if you have identified k equal 19 clusters here.
+
+64
+00:03:50,560 --> 00:03:53,000
+Through Quakers spot checking,
+
+65
+00:03:53,000 --> 00:03:57,560
+you see one cluster within this model contains a large collection of
+
+66
+00:03:57,560 --> 00:04:02,425
+book which you categorize as paranormal teen dramas.
+
+67
+00:04:02,425 --> 00:04:07,130
+Because this is a noun trend in your industry in the present here,
+
+68
+00:04:07,130 --> 00:04:11,180
+you feel somewhat confident in your machine learning approach.
+
+69
+00:04:11,180 --> 00:04:16,085
+You don't know if every cluster is going to be as cohesive as this,
+
+70
+00:04:16,085 --> 00:04:19,655
+but you decide to use this model to see if you
+
+71
+00:04:19,655 --> 00:04:23,905
+can find anything interesting to write an article about.
+
+72
+00:04:23,905 --> 00:04:27,410
+You find a surprisingly large cluster of books,
+
+73
+00:04:27,410 --> 00:04:30,350
+cluster number 7, shown here,
+
+74
+00:04:30,350 --> 00:04:34,150
+where the people are in a long distance relationship.
+
+75
+00:04:34,150 --> 00:04:36,285
+Mission accomplished.
+
+76
+00:04:36,285 --> 00:04:40,010
+You see a few other self-consistent clusters and feel
+
+77
+00:04:40,010 --> 00:04:44,020
+you now have enough useful data to begin writing an article on.
+
+78
+00:04:44,020 --> 00:04:46,550
+Maybe you can title the article,
+
+79
+00:04:46,550 --> 00:04:50,820
+unexpected model, romance microgenres.
+

@@ -1,0 +1,276 @@
+1
+00:00:00,000 --> 00:00:03,090
+We will start with one of the most common examples in
+
+2
+00:00:03,090 --> 00:00:06,375
+machine learning coursework, house price prediction.
+
+3
+00:00:06,375 --> 00:00:10,050
+You want to predict the value of homes in your neighborhood.
+
+4
+00:00:10,050 --> 00:00:14,850
+You know the real estate appraisers use many details to predict value,
+
+5
+00:00:14,850 --> 00:00:18,330
+such as the number of rooms and the house size.
+
+6
+00:00:18,330 --> 00:00:22,595
+Therefore, even if you don't understand the relationship fully,
+
+7
+00:00:22,595 --> 00:00:28,400
+you believe a relationship exists between these observable details and the house price.
+
+8
+00:00:28,400 --> 00:00:31,490
+You choose to use machine learning to discover
+
+9
+00:00:31,490 --> 00:00:35,680
+this relationship based on the data you have access to.
+
+10
+00:00:35,680 --> 00:00:40,970
+Because you think you can find either the actual prices for homes recently sold in
+
+11
+00:00:40,970 --> 00:00:42,635
+your neighborhood or generate
+
+12
+00:00:42,635 --> 00:00:46,675
+accurate estimates for others by asking your real estate appraisers,
+
+13
+00:00:46,675 --> 00:00:50,720
+you are working with the supervised learning task.
+
+14
+00:00:50,720 --> 00:00:54,500
+Because you are trying to predict some continuous numeric value,
+
+15
+00:00:54,500 --> 00:00:58,600
+you recognize this as a regression machine learning task.
+
+16
+00:00:58,600 --> 00:01:01,170
+First, you do data collection.
+
+17
+00:01:01,170 --> 00:01:03,860
+You collect numerous examples of houses
+
+18
+00:01:03,860 --> 00:01:06,755
+which sold in your neighborhood within the past year.
+
+19
+00:01:06,755 --> 00:01:12,910
+Pay real estate appraiser to appraise the house whose selling price is not now.
+
+20
+00:01:12,910 --> 00:01:15,825
+Next you do data exploration.
+
+21
+00:01:15,825 --> 00:01:18,770
+You notice that all of your data are numbers,
+
+22
+00:01:18,770 --> 00:01:24,275
+which is great since most machine learning models operate on sequences of numbers.
+
+23
+00:01:24,275 --> 00:01:26,795
+Finally, you do data cleaning.
+
+24
+00:01:26,795 --> 00:01:30,695
+You look for things in the dataset such as missing information
+
+25
+00:01:30,695 --> 00:01:35,045
+or maybe an outlier that you don't really care about in your problem.
+
+26
+00:01:35,045 --> 00:01:38,320
+Such as a mansion with 10 rooms.
+
+27
+00:01:38,320 --> 00:01:42,050
+You know techniques exist to handle these cases.
+
+28
+00:01:42,050 --> 00:01:47,185
+But for now, you choose to just remove these examples from your dataset.
+
+29
+00:01:47,185 --> 00:01:52,400
+You might also plot house value against each of your inputs variables and
+
+30
+00:01:52,400 --> 00:01:57,620
+observe that when either a lot size or room count increases,
+
+31
+00:01:57,620 --> 00:02:00,145
+how the house value change.
+
+32
+00:02:00,145 --> 00:02:05,375
+You split 80 percent of your dataset randomly into a training dataset,
+
+33
+00:02:05,375 --> 00:02:08,740
+and 20 percent into a test dataset.
+
+34
+00:02:08,740 --> 00:02:12,090
+You're ready to try training a model.
+
+35
+00:02:12,090 --> 00:02:14,325
+You do model selection.
+
+36
+00:02:14,325 --> 00:02:16,275
+After exploring the data,
+
+37
+00:02:16,275 --> 00:02:18,710
+you observe that the relationships between
+
+38
+00:02:18,710 --> 00:02:22,885
+your input variables and label are pretty straightforward.
+
+39
+00:02:22,885 --> 00:02:27,395
+When lot size increases, house value increases.
+
+40
+00:02:27,395 --> 00:02:30,275
+You think this relationship is simple enough
+
+41
+00:02:30,275 --> 00:02:33,635
+that you select a linear model to represent it.
+
+42
+00:02:33,635 --> 00:02:40,285
+A linear model across a single input variable can be easily thought of as a line.
+
+43
+00:02:40,285 --> 00:02:43,935
+It becomes a plane for two variables.
+
+44
+00:02:43,935 --> 00:02:47,665
+Then a hyperplane in more than two variables.
+
+45
+00:02:47,665 --> 00:02:51,980
+By thinking of it as a line with a constant slope will get us
+
+46
+00:02:51,980 --> 00:02:56,410
+far enough in this example that we'll show it depicted here.
+
+47
+00:02:56,410 --> 00:02:59,115
+To do the actual model training,
+
+48
+00:02:59,115 --> 00:03:02,270
+you load your data in Python arrays and use
+
+49
+00:03:02,270 --> 00:03:07,460
+a common Python library tool kit for training classical models.
+
+50
+00:03:07,460 --> 00:03:10,970
+One of the most commonly used evaluation metrics in
+
+51
+00:03:10,970 --> 00:03:17,335
+regression scenario is called RMS or root mean square.
+
+52
+00:03:17,335 --> 00:03:20,435
+The mass is beyond the scope of this lesson.
+
+53
+00:03:20,435 --> 00:03:24,995
+But RMS can be thought of roughly as an average error,
+
+54
+00:03:24,995 --> 00:03:27,845
+an average error across your dataset.
+
+55
+00:03:27,845 --> 00:03:30,785
+You want this value to be low.
+
+56
+00:03:30,785 --> 00:03:32,825
+In the chart shown here,
+
+57
+00:03:32,825 --> 00:03:37,070
+you can imagine we want the line to be close to the data inputs.
+
+58
+00:03:37,070 --> 00:03:41,150
+You compute the root mean square between your model's prediction of
+
+59
+00:03:41,150 --> 00:03:46,225
+a data point and a true home value found in your dataset.
+
+60
+00:03:46,225 --> 00:03:48,900
+You're still new to machine learning.
+
+61
+00:03:48,900 --> 00:03:52,595
+So you are not sure how to interpret these results.
+
+62
+00:03:52,595 --> 00:03:57,625
+You know that having an improved model will probably have a better RMS.
+
+63
+00:03:57,625 --> 00:04:03,610
+But you are not confident if the specific value you have computed is good or bad.
+
+64
+00:04:03,610 --> 00:04:05,810
+As a sanity check,
+
+65
+00:04:05,810 --> 00:04:11,105
+you manually count how many predictions were off by some thresholds,
+
+66
+00:04:11,105 --> 00:04:17,860
+50,000, say, and determine that your model is pretty accurate within this range.
+
+67
+00:04:17,860 --> 00:04:23,690
+You now use this model to predict the house value for other houses on the market.
+
+68
+00:04:23,690 --> 00:04:25,745
+As you see in this example,
+
+69
+00:04:25,745 --> 00:04:31,470
+we can pass any room count and lot size we want to predict a new home value.
+

@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:03,255
+Congratulations on completing this lesson.
+
+2
+00:00:03,255 --> 00:00:05,880
+We went through a lot of information to give you
+
+3
+00:00:05,880 --> 00:00:09,045
+a foundational understanding of machine learning.
+
+4
+00:00:09,045 --> 00:00:13,680
+Hopefully you now have a better sense of what machine learning is.
+
+5
+00:00:13,680 --> 00:00:16,950
+Let's look back and see what we covered.
+
+6
+00:00:16,950 --> 00:00:21,540
+We discussed machine learning as a complex subject area to understand what
+
+7
+00:00:21,540 --> 00:00:23,550
+machine learning is and what are
+
+8
+00:00:23,550 --> 00:00:26,880
+the common components involved in machine learning project.
+
+9
+00:00:26,880 --> 00:00:28,650
+We also introduced you to
+
+10
+00:00:28,650 --> 00:00:34,020
+some most common terms and ideas that are used in machine learning.
+
+11
+00:00:34,020 --> 00:00:37,830
+We discussed how machine learning involves using train models
+
+12
+00:00:37,830 --> 00:00:41,190
+to generate predictions and detect patterns from data.
+
+13
+00:00:41,190 --> 00:00:44,090
+We looked a bit behind the scenes
+
+14
+00:00:44,090 --> 00:00:47,800
+to break down the different steps involved in machine learning.
+
+15
+00:00:47,800 --> 00:00:51,320
+In this section, we took you through a couple of
+
+16
+00:00:51,320 --> 00:00:54,170
+real-world examples which use machine learning
+
+17
+00:00:54,170 --> 00:00:58,199
+in different ways to solve real-world problems.
+

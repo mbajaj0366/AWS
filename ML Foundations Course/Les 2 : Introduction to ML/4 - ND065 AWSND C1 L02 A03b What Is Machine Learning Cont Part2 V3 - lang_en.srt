@@ -1,0 +1,296 @@
+1
+00:00:00,000 --> 00:00:06,645
+Nearly all tasks solved with machine learning involves three primary components.
+
+2
+00:00:06,645 --> 00:00:08,850
+The Machine Learning Model,
+
+3
+00:00:08,850 --> 00:00:10,935
+the Model Training Algorithm,
+
+4
+00:00:10,935 --> 00:00:13,440
+and the Model Inference Algorithm.
+
+5
+00:00:13,440 --> 00:00:16,755
+These three parts are like the different stages
+
+6
+00:00:16,755 --> 00:00:20,685
+after crafting a teapot from a lump of clay.
+
+7
+00:00:20,685 --> 00:00:24,105
+First, you will start with block of raw clay,
+
+8
+00:00:24,105 --> 00:00:26,715
+which represents your machine learning model.
+
+9
+00:00:26,715 --> 00:00:29,940
+At this stage, the clay can be modeled into
+
+10
+00:00:29,940 --> 00:00:35,129
+many different forms and can be used to serve many different purposes.
+
+11
+00:00:35,129 --> 00:00:39,030
+You decide to use this lump of clay to make a tea pot.
+
+12
+00:00:39,030 --> 00:00:41,505
+How do you create this teapot?
+
+13
+00:00:41,505 --> 00:00:45,500
+You inspect and analyze the rock clay and think about what to
+
+14
+00:00:45,500 --> 00:00:49,720
+change to make it look more like the teapot you have in mind.
+
+15
+00:00:49,720 --> 00:00:52,670
+Much like the artist who gently make
+
+16
+00:00:52,670 --> 00:00:56,510
+adjustment to make their clay look more and more like a teapot,
+
+17
+00:00:56,510 --> 00:00:59,690
+the model training algorithm makes a small changes
+
+18
+00:00:59,690 --> 00:01:03,280
+to the model parameters so we achieve our goals.
+
+19
+00:01:03,280 --> 00:01:05,565
+Now you've made your teapot.
+
+20
+00:01:05,565 --> 00:01:08,165
+It's been inspected, evaluated,
+
+21
+00:01:08,165 --> 00:01:10,315
+and now it's ready for your enjoyment.
+
+22
+00:01:10,315 --> 00:01:13,435
+You enjoy your teapot, drink your tea.
+
+23
+00:01:13,435 --> 00:01:16,010
+This represent model inference.
+
+24
+00:01:16,010 --> 00:01:20,120
+Now your model is ready to be used in real world.
+
+25
+00:01:20,120 --> 00:01:26,420
+A model is a generic program made specific by data used to train it.
+
+26
+00:01:26,420 --> 00:01:28,340
+Like a piece of clay,
+
+27
+00:01:28,340 --> 00:01:34,775
+it can be modeled into many different forms and can serve many different purposes.
+
+28
+00:01:34,775 --> 00:01:37,820
+A more technical definition would be that
+
+29
+00:01:37,820 --> 00:01:41,510
+machine learning model is a block of code or framework
+
+30
+00:01:41,510 --> 00:01:48,500
+that can be modified to solve different but related problems based on the data provided.
+
+31
+00:01:48,500 --> 00:01:52,520
+In this example, we are using a linear regression model to
+
+32
+00:01:52,520 --> 00:01:57,325
+predict the number of the snow cones you might expect to sell based on the temperature.
+
+33
+00:01:57,325 --> 00:02:01,774
+Our model here predicts that as the temperature increases,
+
+34
+00:02:01,774 --> 00:02:04,375
+you will sell more snow cones.
+
+35
+00:02:04,375 --> 00:02:08,030
+A model can also be used to predict how the number of
+
+36
+00:02:08,030 --> 00:02:12,350
+people who attend college changes based on the costs of admissions.
+
+37
+00:02:12,350 --> 00:02:18,830
+In this example our model predicts that as the cost of tuition increases,
+
+38
+00:02:18,830 --> 00:02:22,630
+the number of people attending college will decrease.
+
+39
+00:02:22,630 --> 00:02:26,045
+But how does this model do this work?
+
+40
+00:02:26,045 --> 00:02:29,295
+That is what model training is for.
+
+41
+00:02:29,295 --> 00:02:35,525
+The procedure to use data to shape a model for some use cases is called model training.
+
+42
+00:02:35,525 --> 00:02:38,770
+There are many model training algorithms.
+
+43
+00:02:38,770 --> 00:02:40,750
+To understand how they work,
+
+44
+00:02:40,750 --> 00:02:45,860
+let's go back to our flexible lump of clay analogy for a machine learning model.
+
+45
+00:02:45,860 --> 00:02:50,600
+The first thing you would do is inspect and analyze the raw clay
+
+46
+00:02:50,600 --> 00:02:55,780
+and think about how to change it to look more like the tea pot you have in mind.
+
+47
+00:02:55,780 --> 00:03:00,320
+Similarly, a model training algorithm uses the model to
+
+48
+00:03:00,320 --> 00:03:04,885
+process data and then compares the results against a goal.
+
+49
+00:03:04,885 --> 00:03:10,775
+In this step, we determine what changes need to be made to get to that goal.
+
+50
+00:03:10,775 --> 00:03:16,330
+Now you shape the clay to make it look more like the tea pot you have in mind.
+
+51
+00:03:16,330 --> 00:03:21,770
+Similarly, a model training algorithm gently nudges a specific part,
+
+52
+00:03:21,770 --> 00:03:26,440
+in a direction that brings the model closer to achieving their goal.
+
+53
+00:03:26,440 --> 00:03:30,015
+You keep doing these two steps repeatedly.
+
+54
+00:03:30,015 --> 00:03:33,320
+Eventually, you get closer and closer to what you
+
+55
+00:03:33,320 --> 00:03:37,675
+want until you determine that you're close enough to stop.
+
+56
+00:03:37,675 --> 00:03:41,090
+Now you have your completed teapot.
+
+57
+00:03:41,090 --> 00:03:44,075
+It's been inspected and evaluated.
+
+58
+00:03:44,075 --> 00:03:46,550
+It's ready for your enjoyment.
+
+59
+00:03:46,550 --> 00:03:50,950
+What does this mean from a machine learning perspective?
+
+60
+00:03:50,950 --> 00:03:55,070
+We are ready to use the model inference algorithm to,
+
+61
+00:03:55,070 --> 00:03:58,880
+for example, generate predictions using the train model.
+
+62
+00:03:58,880 --> 00:04:03,025
+This process is often referred to as model inference.
+
+63
+00:04:03,025 --> 00:04:07,460
+We just described each of these steps in a bit more detail.
+
+64
+00:04:07,460 --> 00:04:10,135
+Let's put it all together.
+
+65
+00:04:10,135 --> 00:04:12,890
+First, you start with a raw piece of clay
+
+66
+00:04:12,890 --> 00:04:15,425
+which can be modeled into many different things.
+
+67
+00:04:15,425 --> 00:04:17,960
+This represent the machine learning model.
+
+68
+00:04:17,960 --> 00:04:20,930
+Next, you shape your raw piece of clay to make
+
+69
+00:04:20,930 --> 00:04:24,130
+it look like a tea pot that you always wanted.
+
+70
+00:04:24,130 --> 00:04:27,380
+Similarly, the model training algorithm gently
+
+71
+00:04:27,380 --> 00:04:31,445
+nudges parameters to make the model capable of solving the problem.
+
+72
+00:04:31,445 --> 00:04:35,195
+Finally, you can enjoy your teapot and put it to work.
+
+73
+00:04:35,195 --> 00:04:37,325
+This represent model interference.
+
+74
+00:04:37,325 --> 00:04:40,500
+You use your model to solve their problem.
+

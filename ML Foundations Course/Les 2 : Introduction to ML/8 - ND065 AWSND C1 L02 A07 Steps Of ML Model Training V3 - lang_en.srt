@@ -1,0 +1,288 @@
+1
+00:00:00,000 --> 00:00:03,450
+Now we can finally start training our model.
+
+2
+00:00:03,450 --> 00:00:08,145
+One quicker step before training your model is splitting your dataset.
+
+3
+00:00:08,145 --> 00:00:11,144
+You need to randomly split the dataset,
+
+4
+00:00:11,144 --> 00:00:14,310
+keeping some of the data hidden from training.
+
+5
+00:00:14,310 --> 00:00:16,950
+This enables you to later evaluate
+
+6
+00:00:16,950 --> 00:00:21,299
+your model with the data before it's put into production.
+
+7
+00:00:21,299 --> 00:00:26,670
+A training dataset is a data that will be used when your model is training.
+
+8
+00:00:26,670 --> 00:00:28,770
+Most of your data will be here.
+
+9
+00:00:28,770 --> 00:00:34,170
+A general rule of thumb is around 80 percent of your data.
+
+10
+00:00:34,170 --> 00:00:36,705
+There's also a test dataset.
+
+11
+00:00:36,705 --> 00:00:41,410
+This is the data that the model hasn't seen during training.
+
+12
+00:00:41,410 --> 00:00:44,810
+It's used during the model evaluation state.
+
+13
+00:00:44,810 --> 00:00:49,765
+It helps you see how well your model will generalize to new data.
+
+14
+00:00:49,765 --> 00:00:52,340
+As you learn more about machine learning,
+
+15
+00:00:52,340 --> 00:00:56,645
+there are additional components such as validation data.
+
+16
+00:00:56,645 --> 00:00:59,720
+Those are outside the scope of this lesson,
+
+17
+00:00:59,720 --> 00:01:02,110
+but just keep them in mind.
+
+18
+00:01:02,110 --> 00:01:04,995
+What exactly is model training?
+
+19
+00:01:04,995 --> 00:01:07,980
+Let us start with a general definition.
+
+20
+00:01:07,980 --> 00:01:11,105
+The model training algorithm iteratively
+
+21
+00:01:11,105 --> 00:01:15,355
+updates a model parameters to minimize some loss function.
+
+22
+00:01:15,355 --> 00:01:17,670
+Let's unpack that one.
+
+23
+00:01:17,670 --> 00:01:22,145
+Model parameters are sitting knobs or configurations
+
+24
+00:01:22,145 --> 00:01:27,085
+that the training algorithm can update to change how the model behaves.
+
+25
+00:01:27,085 --> 00:01:30,335
+Depending on context, you will also hear
+
+26
+00:01:30,335 --> 00:01:33,995
+other more specific terms used to describe model parameters,
+
+27
+00:01:33,995 --> 00:01:36,790
+such as weights or biases.
+
+28
+00:01:36,790 --> 00:01:39,860
+Taking a look at this snow cone example,
+
+29
+00:01:39,860 --> 00:01:43,730
+since we were trying to fit a linear function to this data,
+
+30
+00:01:43,730 --> 00:01:48,715
+the parameters would be the orientation and location of the line.
+
+31
+00:01:48,715 --> 00:01:53,060
+Nearly all models are trained by a slowly changing
+
+32
+00:01:53,060 --> 00:01:58,660
+model parameters to move the model closer and closer to achieving some goal.
+
+33
+00:01:58,660 --> 00:02:04,520
+A loss function is used to codify the model's distance from the score.
+
+34
+00:02:04,520 --> 00:02:07,580
+For example, if you were trying to predict
+
+35
+00:02:07,580 --> 00:02:10,745
+number of a snow cone sales based on the day's weather,
+
+36
+00:02:10,745 --> 00:02:15,710
+you care about making predictions which are as accurate as possible.
+
+37
+00:02:15,710 --> 00:02:20,810
+You might define a loss function to be something like the average distance
+
+38
+00:02:20,810 --> 00:02:26,375
+between your models predicted number of snow console and the actual number.
+
+39
+00:02:26,375 --> 00:02:28,665
+Here is a concrete example.
+
+40
+00:02:28,665 --> 00:02:31,475
+Imagine that your model predicts you would sell
+
+41
+00:02:31,475 --> 00:02:35,810
+12 snow cones on a day where the temperature is 95.
+
+42
+00:02:35,810 --> 00:02:40,900
+Our historical data shows the number of snow cones sold is 15.
+
+43
+00:02:40,900 --> 00:02:46,850
+The difference between 12 snow cones predicted and 15 actual snow cones sold,
+
+44
+00:02:46,850 --> 00:02:49,175
+which is, as you can see is 3,
+
+45
+00:02:49,175 --> 00:02:52,415
+is what the loss function seeks to minimize.
+
+46
+00:02:52,415 --> 00:02:57,950
+In practice, you will likely use one of several common loss function for most problems.
+
+47
+00:02:57,950 --> 00:03:02,240
+Of course, there are plenty of other details involved in the process.
+
+48
+00:03:02,240 --> 00:03:08,105
+This touch on a few high-level questions you might have and a few useful things to know.
+
+49
+00:03:08,105 --> 00:03:11,390
+As you grow your familiarity with this space,
+
+50
+00:03:11,390 --> 00:03:14,800
+you will learn a few common model training algorithm.
+
+51
+00:03:14,800 --> 00:03:18,360
+You could absolutely implement these from scratch.
+
+52
+00:03:18,360 --> 00:03:22,505
+But unless you're developing brand new models or algorithm,
+
+53
+00:03:22,505 --> 00:03:26,045
+you will likely use one of many machine learning frameworks,
+
+54
+00:03:26,045 --> 00:03:29,230
+which already have these implemented for you.
+
+55
+00:03:29,230 --> 00:03:31,875
+Determining which model to use.
+
+56
+00:03:31,875 --> 00:03:36,710
+A process known as model selection is not a perfect science.
+
+57
+00:03:36,710 --> 00:03:42,800
+The list of established model is constantly growing and even seasoned machine learning
+
+58
+00:03:42,800 --> 00:03:45,830
+practitioners will try many different types of
+
+59
+00:03:45,830 --> 00:03:49,570
+models while solving your problem with machine learning.
+
+60
+00:03:49,570 --> 00:03:53,900
+Within this course, you will see a few types of models at the end
+
+61
+00:03:53,900 --> 00:03:58,220
+of this lesson while walking through some real-world example.
+
+62
+00:03:58,220 --> 00:04:04,535
+Oftentimes a model or a training algorithm will have settings called hyperparameters,
+
+63
+00:04:04,535 --> 00:04:07,640
+which cannot be changed during model training.
+
+64
+00:04:07,640 --> 00:04:13,715
+These settings can affect how quickly or how reliably the model trains.
+
+65
+00:04:13,715 --> 00:04:17,405
+You will see this across many steps in this process,
+
+66
+00:04:17,405 --> 00:04:19,665
+but be prepared to iterate.
+
+67
+00:04:19,665 --> 00:04:25,250
+Pragmatic problem-solving with machine learning is really an exact science.
+
+68
+00:04:25,250 --> 00:04:30,800
+Often you might have assumptions about your data or assumptions about the problem,
+
+69
+00:04:30,800 --> 00:04:33,055
+which turn out not to be true.
+
+70
+00:04:33,055 --> 00:04:35,025
+Don't get discouraged.
+
+71
+00:04:35,025 --> 00:04:39,020
+Instead, foster habit of trying new things and
+
+72
+00:04:39,020 --> 00:04:44,310
+measure success in a way that lets you compare results across iterations.
+
